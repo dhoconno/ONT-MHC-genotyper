@@ -1,0 +1,86 @@
+# Nextflow
+.nextflow*
+work/
+results*/
+.nextflow.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Pixi
+.pixi/
+pixi.lock
+
+# Conda
+conda-meta/
+*.conda
+*.tar.bz2
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data files
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sam
+*.bam
+*.bai
+*.fasta
+*.fa
+*.fai
+
+# Output files
+*.xlsx
+*.html
+*.pdf
+*.log
+
+# CSV and TXT files in results directories
+results*/*.csv
+results*/*.txt
+results*/**/*.csv
+results*/**/*.txt
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Test data (keep test_data directory but not large files)
+test_data/*.fastq.gz
+test_data/*.fasta
+!test_data/README.md

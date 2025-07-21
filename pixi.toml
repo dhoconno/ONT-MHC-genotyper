@@ -1,0 +1,23 @@
+[project]
+name = "mhc-genotyping"
+version = "1.0.0"
+description = "MHC genotyping system for Oxford Nanopore sequencing data"
+channels = ["conda-forge", "bioconda"]
+platforms = ["osx-arm64", "osx-64", "linux-64"]
+
+[dependencies]
+python = ">=3.9,<4"
+vsearch = ">=2.21.0"
+bbmap = ">=39.00"
+nextflow = ">=21.04.0"
+pigz = "*"
+seqkit = ">=2.10.0,<3"
+samtools = ">=1.17"
+
+[pypi-dependencies]
+pandas = ">=1.5.0"
+pysam = ">=0.21.0"
+xlsxwriter = ">=3.0.0"
+biopython = ">=1.80"
+openpyxl = ">=3.0.0"
+numpy = ">=1.21.0"
