@@ -84,3 +84,7 @@ temp/
 test_data/*.fastq.gz
 test_data/*.fasta
 !test_data/README.md
+
+# Reference files (keep all files in ref directory)
+!ref/
+!ref/**
