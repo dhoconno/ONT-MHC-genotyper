@@ -44,7 +44,7 @@ The pipeline requires the following tools, which can be installed via conda/mamb
 
 ```bash
 # Clone the repository
-git clone https://github.com/dholab/ONT-MHC-genotyper.git
+git clone https://github.com/dhoconno/ONT-MHC-genotyper.git
 cd ONT-MHC-genotyper
 
 # Install pixi if not already installed
@@ -58,7 +58,7 @@ pixi install
 
 ```bash
 # Clone the repository
-git clone https://github.com/dholab/ONT-MHC-genotyper.git
+git clone https://github.com/dhoconno/ONT-MHC-genotyper.git
 cd ONT-MHC-genotyper
 
 # Create conda environment
@@ -72,7 +72,7 @@ conda activate mhc-genotyping
 
 ```bash
 # Pull the Docker image (once available)
-docker pull dholab/ont-mhc-genotyper:latest
+docker pull dhoconno/ont-mhc-genotyper:latest
 ```
 
 ## Quick Start
