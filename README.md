@@ -1,6 +1,6 @@
 # ONT-MHC-genotyper
 
-A Nextflow pipeline for MHC genotyping from Oxford Nanopore sequencing data using Fluidigm barcode-based demultiplexing.
+A Nextflow pipeline for MHC genotyping from Oxford Nanopore sequencing data using Fluidigm barcode-based demultiplexing. Originally developed by DHO in experiment 31570.
 
 ## Overview
 
