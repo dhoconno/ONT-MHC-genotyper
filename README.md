@@ -78,7 +78,7 @@ docker pull dholab/ont-mhc-genotyper:latest
 ## Quick Start
 
 1. **Prepare your input files:**
-   - Barcode FASTQ files in a single directory
+   - SUP basecalled and demultiplexed FASTQ files (one per Fluidigm barcode)
    - Sample mapping CSV file
    - Reference FASTA file
    - (Optional) Custom primer sequences
@@ -86,9 +86,9 @@ docker pull dholab/ont-mhc-genotyper:latest
 2. **Create a sample mapping file** (`sample_mapping.csv`):
    ```csv
    tag,GS ID
-   BC01,Sample_001
-   BC02,Sample_002
-   BC03,Sample_003
+   FLD0041,Sample_001
+   FLD0042,Sample_002
+   FLD0043,Sample_003
    ```
 
 3. **Run the pipeline:**
@@ -103,9 +103,9 @@ docker pull dholab/ont-mhc-genotyper:latest
 ## Pipeline Parameters
 
 ### Required Parameters
-- `--barcode_dir`: Directory containing barcode FASTQ files (*.fastq.gz)
+- `--barcode_dir`: Directory containing SUP basecalled and demultiplexed FASTQ files (*.fastq.gz), one per Fluidigm barcode
 - `--reference`: Path to reference FASTA file containing MHC allele sequences
-- `--sample_sheet`: CSV file mapping barcode tags to sample names
+- `--sample_sheet`: CSV file mapping Fluidigm barcode tags to sample names
 
 ### Optional Parameters
 - `--outdir`: Output directory (default: `results`)
@@ -123,13 +123,14 @@ docker pull dholab/ont-mhc-genotyper:latest
 
 ### Barcode FASTQ Files
 - Standard FASTQ format (can be gzipped)
-- Named by barcode (e.g., `barcode01.fastq.gz`)
+- Must be SUP basecalled and demultiplexed
+- Named by Fluidigm barcode (e.g., `FLD0041.fastq.gz`)
 
 ### Sample Mapping CSV
 ```csv
 tag,GS ID
-BC01,Sample_001
-BC02,Sample_002
+FLD0041,Sample_001
+FLD0042,Sample_002
 ```
 
 ### Reference FASTA
@@ -140,11 +141,11 @@ ATGCGGGTCACGGCGCCCCGAACCCTCCTCCTGCTGCTCTCGGCGGCCCTGGCCCTGACCGAGACCTGGGCCGGCTCCCA
 ```
 
 ### Fluidigm Barcode File
-Tab-separated file with barcode names and sequences:
+Tab-separated file with Fluidigm barcode names and sequences:
 ```
-tag	tag_seq
-BC01	AAGAAAGTTGTCGGTGTCTTTGTG
-BC02	TCGATTCCGTTTGTAGTCGTCTGT
+Mid Name	Mid Sequence
+FLD0041	GTATGAGCAC
+FLD0042	CGAGTGCTGT
 ```
 
 ## Output Files
