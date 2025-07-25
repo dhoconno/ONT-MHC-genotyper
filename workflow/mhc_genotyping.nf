@@ -580,16 +580,3 @@ workflow {
     // Create pivot table
     CREATE_PIVOT_TABLE(AGGREGATE_COUNTS.out.aggregated)
 }
-
-/*
- * Completion handler
- */
-workflow.onComplete = {
-    log.info """
-    Pipeline completed!
-    ===================
-    Duration    : ${workflow.duration}
-    Success     : ${workflow.success}
-    Results dir : ${params.outdir}
-    """
-}
